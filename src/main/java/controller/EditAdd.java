@@ -61,6 +61,8 @@ public class EditAdd extends HttpServlet {
             newProduct.setQuantity(quantity);
             newProduct.setDescription(description);
             newProduct.setUser(user);
+            newProduct.setHighlighting(product.isHighlighting());
+            newProduct.setPriorityInList(product.getPriorityInList());
             //System.out.println(1+imageName+1);
             if(imageName != "") {
                 uploadFile(image.getInputStream(), path, imageName);
